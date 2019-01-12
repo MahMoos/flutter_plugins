@@ -64,7 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     if (_currentUser == null) {
       return new SignInScreen(
-        title: "Bienvenue",
+        appBar: AppBar(
+          title: Text("Sign In"),
+          actions: <Widget>[
+            new IconButton(icon: new Icon(Icons.info), onPressed: null)
+          ],
+        ),
         header: new Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           child: new Padding(
