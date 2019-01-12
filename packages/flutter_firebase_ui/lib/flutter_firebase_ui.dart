@@ -44,7 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) => new Scaffold(
-      appBar: _appBar;
+      appBar: _appBar,
       body: new Builder(
         builder: (BuildContext context) {
           return new Container(
