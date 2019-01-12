@@ -9,7 +9,7 @@ import 'utils.dart';
 class SignInScreen extends StatefulWidget {
   SignInScreen({
     Key key,
-    this.title,
+    this.appBar,
     this.header,
     this.footer,
     this.signUpPasswordCheck,
@@ -19,7 +19,7 @@ class SignInScreen extends StatefulWidget {
     this.twitterConsumerSecret,
   }) : super(key: key);
 
-  final String title;
+  final Widget appBar;
   final Widget header;
   final Widget footer;
   final List<ProvidersTypes> providers;
@@ -33,6 +33,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  Widget get _appBar => widget.appBar ?? new Container();
   Widget get _header => widget.header ?? new Container();
   Widget get _footer => widget.footer ?? new Container();
 
@@ -43,10 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) => new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-        elevation: 4.0,
-      ),
+      appBar: _appBar;
       body: new Builder(
         builder: (BuildContext context) {
           return new Container(
