@@ -1,10 +1,11 @@
 library flutter_firebase_ui;
 
-export 'utils.dart';
-
 import 'package:flutter/material.dart';
+
 import 'login_view.dart';
 import 'utils.dart';
+
+export 'utils.dart';
 
 class SignInScreen extends StatefulWidget {
   SignInScreen({
@@ -33,7 +34,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  Widget get _appBar => widget.appBar ?? new Container();
+  Widget get _appBar => widget.appBar ?? null;
   Widget get _header => widget.header ?? new Container();
   Widget get _footer => widget.footer ?? new Container();
 
